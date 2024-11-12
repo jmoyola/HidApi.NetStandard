@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <IsPackable>false</IsPackable>
+	<Nullable>disable</Nullable>
+	<ImplicitUsings>disable</ImplicitUsings>
+	<LangVersion>11</LangVersion>
+	<TargetFrameworks>net6.0;net8.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1"/>
+    <ProjectReference Include="..\HidApi.Netstandard\HidApi.Netstandard.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="WCharT.NetStandard">
+      <HintPath>..\..\..\WCharT.NetStandard\src\WCharT.NetStandard\bin\Debug\netstandard2.0\WCharT.NetStandard.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

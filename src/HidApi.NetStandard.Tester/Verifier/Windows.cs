@@ -1,3 +1,4 @@
+using System;
 using WCharT;
 
 namespace HidApi.Net.Tester;
@@ -17,7 +18,7 @@ public class Windows : IHidApiVerifier
 
     public bool VerifyWCharPointer()
     {
-        string? result;
+        string result;
         const string Expected = "Success";
         unsafe
         {

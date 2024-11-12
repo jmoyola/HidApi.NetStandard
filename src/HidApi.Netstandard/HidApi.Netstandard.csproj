@@ -19,6 +19,10 @@
 
     <PackageReadmeFile>readme.md</PackageReadmeFile>
     <PackageTags>hid;usb;binding</PackageTags>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>9</LangVersion>
+	<ImplicitUsings>disable</ImplicitUsings>
+	<TargetFrameworks>netstandard2.0</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
@@ -30,10 +34,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" Condition="'$(TargetFramework)' == 'net6.0' or '$(TargetFramework)' == 'net7.0'"/>
-    <PackageReference Include="WCharT.Net" Version="0.1.2" />
     
     <InternalsVisibleTo Include="$(AssemblyName).Tester" />
     <None Include="../../readme.md" Pack="true" PackagePath="/" />
+    <PackageReference Include="NativeLibrary.NetStandard" Version="0.1.1" />
+    <PackageReference Include="System.Memory" Version="4.5.5" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+    <PackageReference Include="System.Runtime.InteropServices" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="WCharT.NetStandard">
+      <HintPath>..\..\..\WCharT.NetStandard\src\WCharT.NetStandard\bin\Debug\netstandard2.0\WCharT.NetStandard.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

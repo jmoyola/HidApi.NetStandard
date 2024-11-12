@@ -1,8 +1,9 @@
+using System;
 using WCharT;
 
 namespace HidApi.Net.Tester;
 
-public class Linux : IHidApiVerifier
+public class Osx : IHidApiVerifier
 {
     public bool VerifyCharPointer()
     {

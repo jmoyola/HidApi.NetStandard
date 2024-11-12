@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.InteropServices;
 
 namespace HidApi.Net.Tester;
@@ -98,8 +99,8 @@ public static class Tester
         if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             return OSPlatform.OSX;
 
-        if (RuntimeInformation.IsOSPlatform(OSPlatform.FreeBSD))
-            return OSPlatform.FreeBSD;
+//        if (RuntimeInformation.IsOSPlatform(OSPlatform.FreeBSD))
+//            return OSPlatform.FreeBSD;
 
         throw new NotSupportedException("Unknown OsPlatform");
     }
